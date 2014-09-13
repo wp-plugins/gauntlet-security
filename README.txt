@@ -96,15 +96,6 @@ Gauntlet Security can find opportunities for improvement and recommend ways to h
 3. The file permission test checks all files and directories.
 4. Not all issues need to be fixed. Less important tests are included for the paranoid. 
 
-== Screenshots ==
-
-1. The main page. 
-2. Each test will result in either a pass, fail, or a warning.
-3. All checks include a detailed explanation and instructions on how to fix the issue. 
-4. The file permission test checks all files and directories.
-5. The plugin audit checks all your installed plugins and raises red flags if the plugin hasn't been updated in awhile or gets poor ratings.
-6. Not all issues need to be fixed. Less important tests are included for paranoid web masters. 
-
 == Changelog ==
 
 = 1.0.0 =
