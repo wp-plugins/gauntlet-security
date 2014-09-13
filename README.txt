@@ -45,6 +45,8 @@ Checks and recommendations include:
 * Prevent username enumeration through standard author URLs
 * ...more tests are planned
 
+Check the [screenshots](screenshots) tab above for more detail on some of the above features.
+
 = Requirements =
 
 * Apache web server
@@ -85,7 +87,23 @@ I can't guarantee that the recommendations or sample code provided in this plugi
 = Why can't this plugin make these changes automatically? =
 Most of this plugin's recommendations do not require a plugin - they are server configurations or WordPress configurations that only need to be set once. 
 
-Gauntlet Security can find opportunities for improvement and recommend ways to harden your site. It can also help you identify the risks of making specific changes to your WordPress configuration. Other plugins can automate a few of these hardening techniques for you, but if something breaks it's not always easy to revert the changes. Many of the suggested fixes cannot be automated.
+Gauntlet Security can find opportunities for improvement and recommend ways to harden your site. It can also help you identify the risks of making specific changes to your WordPress configuration. Other plugins can automate a few of these hardening techniques for you, but if something breaks it's not always easy to revert the changes. Many of the suggested  fixes cannot be automated.
+
+== Screenshots ==
+
+1. The main page. 
+2. All checks include a detailed explanation and instructions on how to fix the issue. 
+3. The file permission test checks all files and directories.
+4. Not all issues need to be fixed. Less important tests are included for the paranoid. 
+
+== Screenshots ==
+
+1. The main page. 
+2. Each test will result in either a pass, fail, or a warning.
+3. All checks include a detailed explanation and instructions on how to fix the issue. 
+4. The file permission test checks all files and directories.
+5. The plugin audit checks all your installed plugins and raises red flags if the plugin hasn't been updated in awhile or gets poor ratings.
+6. Not all issues need to be fixed. Less important tests are included for paranoid web masters. 
 
 == Changelog ==
 
