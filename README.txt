@@ -93,8 +93,7 @@ Gauntlet Security can find opportunities for improvement and recommend ways to h
 
 1. The main page. 
 2. All checks include a detailed explanation and instructions on how to fix the issue. 
-3. The file permission test checks all files and directories.
-4. Not all issues need to be fixed. Less important tests are included for the paranoid. 
+3. Not all issues need to be fixed. Less important tests are included for the paranoid. 
 
 == Changelog ==
 
