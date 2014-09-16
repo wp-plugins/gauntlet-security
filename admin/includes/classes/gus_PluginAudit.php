@@ -51,6 +51,10 @@ class gus_PluginAudit extends gus_TestBase
 		{
 			$json = json_decode($response['body']);
 		}
+        else
+        {
+            $json = null;
+        }
 		
 		// Default is a pass
 		$sub_test['pass'] = 'pass';

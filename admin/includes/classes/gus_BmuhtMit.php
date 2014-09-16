@@ -69,7 +69,10 @@ class gus_BmuhtMit extends gus_TestBase
 	
 	protected function sub_test($args)
 	{
-		$sub_test = array(
+        $path = $args['path'];
+        $contents = $args['contents'];
+		
+        $sub_test = array(
 			'pass' => 'pass',
 			'table_columns' => array(
 				'Path' => '',

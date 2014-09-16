@@ -237,10 +237,10 @@
 /*
     Test Headings
 */
-.gauntlet h3{
+.gauntlet .test_heading{
 	margin-top:2em;
 }
-.gauntlet h3 .sub-head{
+.gauntlet .test_heading .sub-head{
 	font-weight:normal;
 }
 .gauntlet .test_message h3{
@@ -394,31 +394,41 @@
 */
 .gauntlet-about .main{
 }
-.gauntlet-about .sidebar{
-    background:white;
-    border:1px solid #D4D4D4;
-    padding:0.5em 1em 1em;
+
+/*
+    Override WP postbox style
+*/
+.gauntlet-about .postbox{
+    min-width:0;
 }
+.gauntlet-about .postbox .hndle{
+    cursor:auto;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
 @media screen and (min-width: 569px){
     .gauntlet-about .main{
         float:left;
-        width:47%;
+        width:50%;
     }
     .gauntlet-about .sidebar{
         float:right;
-        width:47%;
+        width:44%;
     }
 }
 @media screen and (min-width: 782px){
     .gauntlet-about .main{
-        width:62%;
+        width:57%;
     }
     .gauntlet-about .sidebar{
-        width:30%;
+        width:35%;
     }
 }
 .gauntlet-about h3{
-    margin-top:1em;
+/*    margin-top:1em;*/
 }
 .gauntlet-about .content_box{
     margin-bottom:3em;

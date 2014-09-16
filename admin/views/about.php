@@ -122,27 +122,72 @@
 
             </div>
         
-            <div class='sidebar'>
+            <div class='sidebar metabox-holder'>
             
-                <div class='support_this_plugin content_box'>
+                <div class='postbox'>
 
-                    <h3>Hi!</h3>
-                
-                    <p>I built this plugin to use on my own clients' sites as a general purpose
-                        security checklist. 
-                        There are other plugins that have similar functionality
-                        but many of these didn't include the tests I needed, or were 
-                        "all in one" plugins that included a lot of unwanted functionality.
+                    <h3 class='hndle'>Hi!</h3>
+                    
+                    <div class='inside'>
+
+                        <p>I built this plugin to use on my own clients' sites as a general purpose
+                            security checklist. 
+                            There are other plugins that have similar functionality
+                            but many of these didn't include the tests I needed, or were 
+                            "all in one" plugins that included a lot of unwanted functionality.
+                            </p>
+
+                        <p>I intend to build on this group of tests and will continually 
+                            revise the suggestions here to keep current with WordPress best practices.
+                            If you have any ideas on how I can make this plugin better, please let me know.
                         </p>
-
-                    <p>I intend to build on this group of tests and will continually 
-                        revise the suggestions here to keep current with WordPress best practices.
-                        If you have any ideas on how I can make this plugin better, please let me know.
-                    </p>
                 
-                    <p>&mdash;Cornelius Bergen,
-                    <a href='http://matchboxcreative.com'>Matchbox Creative</a></p>
-                                
+                        <p>&mdash;Cornelius Bergen,
+                        <a href='http://matchboxcreative.com'>Matchbox Creative</a></p>
+                
+                    </div>
+                    
+                    <h3 class='hndle'>Like this plugin?</h3>
+                    
+                    <div class='inside'>
+                        Please take a moment to rate it on the 
+                        <a href='http://wordpress.org/support/view/plugin-reviews/gauntlet-security' target='_blank'>WordPress Plugin Directory</a>.
+                    </div>
+
+                    <h3 class='hndle'>Know how it can be better?</h3>
+                    
+                    <div class='inside'>
+
+                        Send me your feature requests or suggestions on the plugin's
+                        <a href='https://wordpress.org/support/plugin/gauntlet-security' target='_blank'>support forum</a>. 
+                
+                    </div>
+                    
+                    <h3 class='hndle'>Found a bug?</h3>
+                    
+                    <div class='inside'>
+
+                        Report it in the 
+                        <a href='https://wordpress.org/support/plugin/gauntlet-security' target='_blank'>support forum</a>. 
+                
+                    </div>
+                
+                    <h3 class='hndle'>Has this been valuable to you?</h3>
+                
+                    <div class='inside'>
+                        <div class='donate_wrapper'>
+                
+                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input type="hidden" name="hosted_button_id" value="RGTZ39B4M83SA">
+                            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                            </form>
+                
+                        </div>
+                    </div>
+                
+
                 </div>
 
             </div>

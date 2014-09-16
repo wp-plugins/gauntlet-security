@@ -126,7 +126,7 @@ class gus_CommonPasswords extends gus_TestBase
 		switch($this->pass)
 		{
 			case 'pass':
-			return 'All admin users have passwords stronger than the ' . $this->dictionary_count . ' most popular passwords';
+			return "All admin users have passwords stronger than the {$this->dictionary_count} most popular passwords. The dictionary used here is very small so a successful result does not guarantee that the passwords are strong&hellip; just that they are not very weak!";
 			break;
 			
 			case 'fail':

@@ -6,7 +6,7 @@
  * Plugin URI: 
  * Author: Cornelius Bergen, Matchbox Creative
  * Author URI: http://matchboxcreative.com
- * Version: 1.0
+ * Version: 1.0.1
  * Text Domain: gauntlet
  */
 
@@ -37,10 +37,6 @@ if ( ! class_exists( 'Gauntlet_Security' ) )
 
             // WP Ajax action for a single test
         	add_action( 'wp_ajax_run_a_test', array( $this, 'run_a_test' ) );
-
-            // Set up test runner
-        	require_once( plugin_dir_path( __FILE__ ) . 'admin/includes/classes/gus_TestRunner.php' );
-            $this->test_runner = new gus_TestRunner();
         }
     
         public function add_action_link( $links )
@@ -83,6 +79,10 @@ if ( ! class_exists( 'Gauntlet_Security' ) )
             // Will this plugin work on this server environment?
             $server_info = $this->meets_requirements();
             
+            // Set up test runner
+        	require_once( plugin_dir_path( __FILE__ ) . 'admin/includes/classes/gus_TestRunner.php' );
+            $this->test_runner = new gus_TestRunner();
+
             if( $server_info['pass'] ) 
             {
                 $this->test_runner->show_unrun_tests();		
@@ -124,6 +124,10 @@ if ( ! class_exists( 'Gauntlet_Security' ) )
     
         	check_ajax_referer( 'run-the-gauntlet', 'nonce' );
             
+            // Set up test runner
+        	require_once( plugin_dir_path( __FILE__ ) . 'admin/includes/classes/gus_TestRunner.php' );
+            $this->test_runner = new gus_TestRunner();
+
             try
             {
                 $test_result = $this->test_runner->run($_POST['test_id']);
