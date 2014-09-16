@@ -54,7 +54,7 @@
     	<?php if($test_results): ?>
 
     		<?php foreach($test_results as $category => $test_statuses): ?>
-    	<h3><?php echo $category; ?></h3>
+    	<h3 class='test_heading'><?php echo $category; ?></h3>
     	<ol class='test_group content_wrap'>
 		
     		<?php foreach($test_statuses as $test_group): ?>

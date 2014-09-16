@@ -59,7 +59,7 @@ class gus_FileEditing extends gus_TestBase
            login as admins from editing plugins and themes this way.</p> 
         
         <p>Turning this off may help deter lazier hackers, but really, 
-            if a hacker can login to your control panel, they can also 
+            if a hacker can log in to your control panel, they can also 
             install plugins giving them complete access to your files and database.
             It's still worth doing though even if it's just to prevent other admins (who may 
             know just enough to be dangerous) from tinkering.</p>

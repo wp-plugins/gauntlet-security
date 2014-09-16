@@ -112,7 +112,7 @@ EOD;
 
 		<p>If you have access to your system php.ini file, add:</p>
 	
-        <code class='prettyprint'>disable_functions ={$dangerous_csv}</code>
+        <code class='prettyprint'>disable_functions = {$dangerous_csv}</code>
 
 		<p>Then restart Apache.</p>
 	
