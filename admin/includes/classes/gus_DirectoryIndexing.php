@@ -69,6 +69,15 @@ EOD;
 	
 	protected function how_to_fix()
 	{
+        $code1 = <<<EOD
+
+<IfModule mod_autoindex.c>
+Options -Indexes
+</IfModule>
+
+EOD;
+        $code1 = htmlentities(trim($code1));
+            
 		return <<<EOD
 			
 		To stop files from being listed in a specific directory, you can simply put an empty 
@@ -76,7 +85,7 @@ EOD;
         But it's a lot of work to include an empty file in every single sub-directory.
 		So to turn off directory indexing site-wide, add this to the .htaccess file in your web root:
 		
-        <code class='prettyprint'>Options -Indexes</code>
+        <code class='prettyprint'>{$code1}</code>
 		
 EOD;
 	}
@@ -85,5 +94,14 @@ EOD;
 	{
 		return 'Intermediate';
 	}
+    
+    protected function references()
+    {
+        return <<<EOD
+            
+    <a href='https://github.com/h5bp/server-configs-apache'>Apache Server Configs: HTML5 Boilerplate</a><br>
+        
+EOD;
+    }
 	
 }

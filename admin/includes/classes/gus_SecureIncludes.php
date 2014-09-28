@@ -147,9 +147,14 @@ EOD;
         
 EOD;
 	}
-	
-	protected function fix_difficulty()
-	{
-		return "Intermediate";
-	}
+    
+    protected function fix_difficulty()
+    {
+        return "Intermediate";
+    }
+    
+    protected function references()
+    {
+        return "<a href='http://codex.wordpress.org/Hardening_WordPress#Securing_wp-includes'>Codex: Securing wp-includes - Hardening Wordpress</a>";
+    }
 }

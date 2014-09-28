@@ -4,11 +4,11 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: security, secure, vulnerability, exploit, hacks, audit, scanner, virus, gauntlet, checklist, protection
 Requires at least: 3.4
 Tested up to: 4.0
-Stable tag: 1.0.1
+Stable tag: 1.1.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Performs a detailed security analysis of your WordPress installation. Gives tips on how to make your site more secure.
+Performs a detailed security analysis of your WordPress installation. Suggests ways to make your site more secure.
 
 == Description ==
 
@@ -23,6 +23,7 @@ Checks and recommendations include:
 * Prevent code execution in the uploads directory
 * Block files in the includes directory
 * Rename or move the content directory
+* Make sure your server is not vulnerable to the Shellshock Bash bug
 * Disable dangerous PHP functions
 * Disable allow_url_include and allow_url_fopen PHP flags
 * Use a strong database password
@@ -43,7 +44,7 @@ Checks and recommendations include:
 * Minimize the number of admin users
 * Users should not display their login usernames publicly
 * Prevent username enumeration through standard author URLs
-* ...more tests are planned
+* ...more tests planned
 
 Check the [screenshots](screenshots) tab above for more detail on some of the above features.
 
@@ -96,6 +97,12 @@ Gauntlet Security can find opportunities for improvement and recommend ways to h
 3. Not all issues need to be fixed. Less important tests are included for the paranoid. 
 
 == Changelog ==
+
+= 1.1.0 =
+* New test: Check for Shellshock bug
+* Enhancement: Add reference links to many tests for more information
+* Enhancement: Improve PHP display errors check
+* Enhancement: Improve TimThumb check
 
 = 1.0.1 =
 * Fix: TimThumb test

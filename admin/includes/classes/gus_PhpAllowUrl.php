@@ -128,8 +128,8 @@ EOD;
 	{
 		$code = <<<EOD
 
-allow_url_include = Off
-allow_url_fopen = Off
+allow_url_include = 'off'
+allow_url_fopen = 'off'
 
 EOD;
 		$code = trim($code);
@@ -163,4 +163,13 @@ EOD;
 		return 'Advanced';
 	}
 	
+    protected function references()
+    {
+        return <<<EOD
+            
+        <a href='http://codex.wordpress.org/HTTP_API'>Codex: HTTP API</a><br>
+        <a href='http://php.net/manual/en/features.remote-files.php'>PHP Manual: Using remote files</a><br>
+
+EOD;
+    }
 }

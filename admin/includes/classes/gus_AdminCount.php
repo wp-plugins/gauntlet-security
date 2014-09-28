@@ -126,4 +126,12 @@ EOD;
 		return 'Easy';
 	}
 
+    protected function references()
+    {
+        return <<<EOD
+            
+        <a href='http://codex.wordpress.org/Brute_Force_Attacks'>Codex: Brute Force Attacks</a><br>
+
+EOD;
+    }
 }

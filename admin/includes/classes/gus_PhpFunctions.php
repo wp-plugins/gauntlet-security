@@ -130,4 +130,12 @@ EOD;
 		return 'Advanced';
 	}
 
+    protected function references()
+    {
+        return <<<EOD
+            
+        <a href='http://stackoverflow.com/a/3697776/3976381'>Stack Overflow: Exploitable PHP functions</a><br>
+
+EOD;
+    }
 }

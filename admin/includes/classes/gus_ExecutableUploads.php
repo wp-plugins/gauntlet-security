@@ -149,4 +149,14 @@ EOD;
 	{
 		return "Intermediate";
 	}
+
+    protected function references()
+    {
+        return <<<EOD
+            
+        <a href='http://www.askapache.com/htaccess/using-filesmatch-and-files-in-htaccess.html'>Ask Apache: Using FilesMatch and Files in htaccess</a><br>
+        <a href='http://docstore.mik.ua/orelly/linux/apache/ch05_06.htm'>Apache: The Definitive Guide: 5.6. Order, Allow, and Deny</a><br>
+EOD;
+    }
+	
 }

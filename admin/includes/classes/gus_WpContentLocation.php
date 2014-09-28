@@ -143,4 +143,11 @@ EOD;
 		return 'Advanced';
 	}
 	
+    protected function references()
+    {
+        return <<<EOD
+        
+        <a href='http://codex.wordpress.org/Determining_Plugin_and_Content_Directories'>Codex: Determining Plugin and Content Directories</a>
+EOD;
+    }
 }

@@ -223,5 +223,18 @@ EOD;
 	{
 		return 'Easy';
 	}
+    
+    
+    
+    protected function references()
+    {
+        return <<<EOD
+    
+        <a href='https://wordpress.org/plugins/'>WordPress Plugin Directory</a><br>
+        <a href='http://web.nvd.nist.gov/view/vuln/search-results?query=wordpress&search_type=all&cves=on'>National Vulnerability Database</a><br>
+
+EOD;
+    }
+    
 
 }
