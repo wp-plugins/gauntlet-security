@@ -109,5 +109,13 @@ EOD;
 	{
 		return 'Easy';
 	}	
-	
+
+    protected function references()
+    {
+        return <<<EOD
+            
+        <a href='http://codex.wordpress.org/Hardening_WordPress#Disable_File_Editing'>Codex: Disable File Editing - Hardening WordPress</a><br>
+
+EOD;
+    }
 }

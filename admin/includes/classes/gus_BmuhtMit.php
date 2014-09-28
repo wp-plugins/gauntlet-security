@@ -35,11 +35,13 @@ class gus_BmuhtMit extends gus_TestBase
         $directory_structure = array_merge($theme_dirs, $plugin_dirs, $mu_plugin_dirs);
 
         $timthumb_keywords = array(
-            '/timthumb.php',
-            '/thumb.php',
-            '/pics.php',
-            '/image.php',
-            '/upload.php',
+            'image',
+            'img',
+            'pic',
+            'thumb',
+            'tim.php',
+            'tt.php',
+            'upload',
         );
         
         foreach( $directory_structure as $path ) 
@@ -47,20 +49,26 @@ class gus_BmuhtMit extends gus_TestBase
             $this->num_paths++;
 
             $file_part = strtolower(strrchr($path, '/'));
-            if( in_array ( $file_part, $timthumb_keywords ) )
-            {
-                error_log("checking... " . $path);
 
-                if( $file_handle = @fopen( $path, 'r' ) )
+            $suspicious = false;
+            foreach($timthumb_keywords as $k)
+            {
+                if( strpos( $file_part, $k ) !== false )
                 {
-                    $contents = @fread( $file_handle, 1250 ); // just the first few bytes
-                    @fclose($file_handle);
-                    
-                    $this->run_sub_test( array(
-                        'path' => $path,
-                        'contents' => $contents,
-                    ) );
+                    $suspicious = true;
+                    break;
                 }
+            }
+                
+            if( $suspicious && $file_handle = @fopen( $path, 'r' ) )
+            {
+                $contents = @fread( $file_handle, 1250 ); // just the first few bytes
+                @fclose($file_handle);
+                
+                $this->run_sub_test( array(
+                    'path' => $path,
+                    'contents' => $contents,
+                ) );
             }
         }
         

@@ -28,7 +28,7 @@ class gus_UserNames extends gus_TestBase
 			
 			/*
 				Also display the (redirected) permalink for the URL if applicable
-					Ex: http://wp-security-plugin:8888/author/user-login
+					Ex: http://example.com/author/user-login
 			*/
 			if($response['response']['code'] == 301)
 			{

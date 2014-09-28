@@ -70,9 +70,14 @@ class gus_TestBase
 			break;
 
 			case 'undetermined':
-				$this->undetermined();
+    			if($this->pass !== 'critical')
+    			{
+    				$this->undetermined();
+    			}
 			break;
 		}
+        
+        return $sub_test;
 	}
 
 		
@@ -80,6 +85,7 @@ class gus_TestBase
 	protected function why_important(){}
 	protected function how_to_fix(){}
 	protected function fix_difficulty(){}
+	protected function references(){}
 	
 	
 	protected function pass()
@@ -237,27 +243,38 @@ EOD;
 			</div>
 EOD;
 		}
-		
-		if( $html = $this->how_to_fix() )
-		{
-			if( $difficulty = $this->fix_difficulty() )
-			{
-				$difficulty = "<p><strong>Difficulty:</strong> {$difficulty}</p>\n";
-			}
-			else
-			{
-				$difficulty = '';
-			}
-			
-			$this->message .= <<<EOD
-			
-			<div class='how_to_fix'>			
-				<h3>How can this be fixed?</h3>				
-				{$difficulty}		
-				{$html}				
-			</div>
+        
+        if( $html = $this->how_to_fix() )
+        {
+            if( $difficulty = $this->fix_difficulty() )
+            {
+                $difficulty = "<p><strong>Difficulty:</strong> {$difficulty}</p>\n";
+            }
+            else
+            {
+                $difficulty = '';
+            }
+            
+            $this->message .= <<<EOD
+            
+            <div class='how_to_fix'>            
+                <h3>How can this be fixed?</h3>                
+                {$difficulty}        
+                {$html}                
+            </div>
 EOD;
-		}
+        }
+        
+        if( $html = $this->references() )
+        {
+            $this->message .= <<<EOD
+            
+            <div class='recommendations'>
+                <h3>References</h3>
+                {$html}
+            </div>
+EOD;
+        }
 	}
 
 	

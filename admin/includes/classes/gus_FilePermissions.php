@@ -219,4 +219,14 @@ EOD;
 	{
 		return 'Advanced';
 	}
+    
+    protected function references()
+    {
+        return <<<EOD
+            
+            <a href='http://codex.wordpress.org/Hardening_WordPress#File_Permissions'>Codex: File Permissions - Hardening Wordpress</a><br>
+            <a href='http://codex.wordpress.org/Changing_File_Permissions'>Codex: Changing File Permissions</a>    
+        
+EOD;
+    }
 }

@@ -124,9 +124,8 @@ EOD;
         
         <code class="prettyprint">define('FORCE_SSL_ADMIN', true);</code>
         
-        ...but setting up SSL on your server is not so simple. For more information, start here:
-		<a target='_blank' href='http://codex.wordpress.org/Administration_Over_SSL'>codex.wordpress.org/Administration_Over_SSL</a>
-		
+        ...but setting up SSL on your server is not so simple. (See the reference below more info.)
+        
 EOD;
 	}
 	
@@ -134,5 +133,15 @@ EOD;
 	{
 		return 'Advanced';
 	}
+
+    protected function references()
+    {
+        return <<<EOD
+            
+        <a href='http://codex.wordpress.org/Administration_Over_SSL'>Codex: Administration Over SSL</a><br>
+
+EOD;
+    }
+    
 	
 }

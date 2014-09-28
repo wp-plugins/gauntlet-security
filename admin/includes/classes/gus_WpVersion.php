@@ -109,5 +109,14 @@ EOD;
 		return 'Easy';
 	}
 	
+    protected function references()
+    {
+        return <<<EOD
+            
+        <a href='http://codex.wordpress.org/Updating_WordPress'>Codex: Updating WordPress</a><br>
+
+EOD;
+    }
+    
 
 }

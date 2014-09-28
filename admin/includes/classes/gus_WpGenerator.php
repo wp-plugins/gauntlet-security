@@ -128,5 +128,16 @@ EOD;
 	{
 		return 'Intermediate';
 	}	
+
+    protected function references()
+    {
+        return <<<EOD
+            
+        <a href='http://kovshenin.com/2013/dont-hide-the-fact-that-youre-using-wordpress/'>Konstantin Kovshenin: Don’t Hide the Fact That You’re Using WordPress</a><br>
+        <a href='http://plugins.twinpictures.de/wordpress-jquery-versions/'>Twinpictures: A History of jQuery Versions Included in WordPress</a><br>
+        <a href='http://www.virendrachandak.com/techtalk/how-to-remove-wordpress-version-parameter-from-js-and-css-files/'>Virendra Chandak: How To Remove WordPress Version Parameter From JS and CSS Files</a><br>
+
+EOD;
+    }
 	
 }

@@ -148,4 +148,14 @@ EOD;
 		return 'Easy';
 	}	
 	
+    protected function references()
+    {
+        return <<<EOD
+            
+        <a href='http://codex.wordpress.org/Editing_wp-config.php#Security_Keys'>Codex: Security Keys - Editing wp-config.php</a><br>
+
+EOD;
+    }
+    
+    
 }
