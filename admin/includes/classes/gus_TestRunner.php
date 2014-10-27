@@ -10,11 +10,11 @@ class gus_TestRunner
 		require_once( plugin_dir_path( __FILE__ ) . 'gus_TestBase.php' );
 
 		// File access
-		$this->tests[] = array('gus_Shellshock', 'Files');
 		$this->tests[] = array('gus_FilePermissions', 'Files');
 		$this->tests[] = array('gus_DirectoryIndexing', 'Files');
 		$this->tests[] = array('gus_ExecutableUploads', 'Files');
 		$this->tests[] = array('gus_SecureIncludes', 'Files');
+		$this->tests[] = array('gus_Shellshock', 'Files');
 		$this->tests[] = array('gus_WpContentLocation', 'Files');
                                 
 		// PHP configuration    

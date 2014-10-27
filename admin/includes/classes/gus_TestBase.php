@@ -46,6 +46,13 @@ class gus_TestBase
 	public function run_sub_test( $args )
 	{
 		$sub_test = $this->sub_test( $args );
+        
+        // If sub_test = false, then skip this test
+        if($sub_test === false)
+        {
+            return false;
+        }
+        
 		$this->sub_tests[] = $sub_test;
 		
 		// Update the main test's pass fail/status		
