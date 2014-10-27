@@ -62,14 +62,14 @@
 		
     		<li class='<?php echo $test->html_class() ?>'>			
 			
-    			<h2<? if($test->message): ?> class='toggle has_icon_lg'<? endif; ?>>
-                    <? if($test->message): ?><span class='more_link'>More</span><? endif; ?>
+    			<h2<?php if($test->message): ?> class='toggle has_icon_lg'<?php endif; ?>>
+                    <?php if($test->message): ?><span class='more_link'>More</span><?php endif; ?>
                     <?php echo $test->title() ?>
                 </h2>
 			
-    			<? if($test->message): ?>
+    			<?php if($test->message): ?>
     			<div class='test_message'><?php echo $test->message ?></div>			
-    			<? endif; ?>
+                <?php endif; ?>
     		</li>
 		
     		<?php endforeach; ?>

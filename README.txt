@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: security, secure, vulnerability, exploit, hacks, audit, scanner, virus, gauntlet, checklist, protection
 Requires at least: 3.4
 Tested up to: 4.0
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -97,6 +97,11 @@ Gauntlet Security can find opportunities for improvement and recommend ways to h
 3. Not all issues need to be fixed. Less important tests are included for the paranoid. 
 
 == Changelog ==
+
+= 1.1.2 =
+* Fix: Remove PHP short tags
+* Enhancement: File Permissions check includes more "why" and less "how"
+* Enhancement: Shellshock check uses a more reliable method
 
 = 1.1.1 =
 * Fix: Plugin "PHP Fatal error"

@@ -17,11 +17,11 @@
 				individually
 			*/
 			var tests = [
-                ['gus_Shellshock', 'slow'],
                 ['gus_FilePermissions', 'slow'],
                 ['gus_DirectoryIndexing', 2],
                 ['gus_ExecutableUploads', 2],
                 ['gus_SecureIncludes', 2],
+                ['gus_Shellshock', 'slow'],
                 ['gus_WpContentLocation', 2],
                 ['gus_PhpFunctions', 2],
                 ['gus_PhpAllowUrl', 2],
