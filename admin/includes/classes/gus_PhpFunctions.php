@@ -8,11 +8,11 @@ class gus_PhpFunctions extends gus_TestBase
 
 	private $dangerous = array(
 		'exec', 
-		'passthru', 
 		'shell_exec', 
 		'system', 
-		'proc_open', 
+		'passthru', 
         'pcntl_exec',
+		'proc_open', 
 	);
 
 	

@@ -128,8 +128,8 @@ EOD;
 	{
 		$code = <<<EOD
 
-allow_url_include = 'off'
-allow_url_fopen = 'off'
+allow_url_include = off
+allow_url_fopen = off
 
 EOD;
 		$code = trim($code);

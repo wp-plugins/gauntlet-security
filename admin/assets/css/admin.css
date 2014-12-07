@@ -317,8 +317,10 @@
 .gauntlet .warning{
 	color:#DB2C64;
 }
-.critical h2, table .critical td{
-	color:red;
+.critical h2, 
+table .critical td *,
+table .critical td{
+	color:red !important;
 	font-weight:bold;
 }
 .undetermined h2{

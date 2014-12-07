@@ -92,7 +92,7 @@ EOD;
 	{
 		return <<<EOD
 			
-		Change a user's display name by by editing their "Display name publicly as" setting.
+		Change a user's display name by editing their "Display name publicly as" setting.
 
 EOD;
 	}

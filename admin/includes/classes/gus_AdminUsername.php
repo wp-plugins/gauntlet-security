@@ -7,11 +7,22 @@ class gus_AdminUsername extends gus_TestBase
 	protected $test_table_fail_only = true;
 
 	private $bad_names = array(
-		'admin',
-		'administrator',
-		'test',
-        'support',
 		'adm',
+		'admin',
+        'admin1',
+		'administrator',
+        'backup',
+        'demo',
+        'editor',
+        'login',
+        'moderator',
+        'office',
+        'support',
+		'test',
+        'tester',
+        'user',
+        'user2',
+        'username',
 	);
 	private $bad_domain = '';
 
@@ -145,4 +156,15 @@ EOD;
 	{
 		return 'Intermediate';
 	}
+
+    protected function references()
+    {
+        return <<<EOD
+            
+        <a href='http://simonfredsted.com/1260'>Simon Fredsted: 300,000 login attempts and 5 observations</a><br>
+        <a href='https://github.com/szepeviktor/wordpress-plugin-construction/blob/master/wordpress-fail2ban/block-bad-requests/wp-login-bad-request.inc.php'>Viktor Szépe: Block Bad Requests plugin</a><br>
+
+EOD;
+    }
+
 }
