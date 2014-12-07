@@ -8,14 +8,27 @@ class gus_UserNames extends gus_TestBase
 	protected function main_check()
 	{
 		$users = get_users();
-		$first_user_id = $users[0]->ID;
+        foreach($users as $u)
+        {
+            if(count_user_posts($u->ID) > 0)
+            {
+        		$test_user_id = $u->ID;            
+            }
+        }
+        
+        if( ! isset($test_user_id) )
+        {
+            $current_user = wp_get_current_user();
+            $test_user_id = $current_user->ID;
+        }
 			
 		/*
 			Can usernames be easily enumerated? (like with WPScan)
 		*/
-		$url = site_url() . '/?author=' . $first_user_id;
-		$args = array();
+		$url = site_url() . '/?author=' . $test_user_id;
+        $args = (is_ssl()) ? array('sslverify' => false) : array() ; 
 		$response = wp_remote_head( $url, $args );
+
 		if( 
 			! is_object($response) && 
 			( $response['response']['code'] == 200 ||
@@ -32,7 +45,7 @@ class gus_UserNames extends gus_TestBase
 			*/
 			if($response['response']['code'] == 301)
 			{
-				$this->example_redirected_url = get_author_posts_url( $first_user_id );
+				$this->example_redirected_url = get_author_posts_url( $test_user_id );
 			}
 		}
 		else

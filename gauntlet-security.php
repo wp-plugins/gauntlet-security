@@ -188,6 +188,12 @@ if ( ! class_exists( 'Gauntlet_Security' ) )
             {
                 $pass_reqs = false;
             }
+            
+            // Force the plugin to be enabled. GUS_FORCE_ENABLE can be set in wp-config.php
+            if ( defined( 'GUS_FORCE_ENABLE' ) && GUS_FORCE_ENABLE )
+            {
+                $pass_reqs = true;
+            }
 
             return array(
                 'pass' => $pass_reqs,

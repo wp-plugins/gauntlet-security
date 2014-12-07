@@ -190,7 +190,9 @@ EOD;
 		</p>
 		
 		<p>The latest version is available here: 
-		<a href='{$this->latest_url}' target='_blank'>{$this->latest_url}</a></p>
+		<a href='{$this->latest_url}' target='_blank'>{$this->latest_url}</a>
+        but keep in mind that as of September 2014, it's no longer being maintained.
+        </p>
 		
 EOD;
 	}
@@ -199,4 +201,13 @@ EOD;
 	{
 		return 'Advanced';
 	}	
+
+    protected function references()
+    {
+        return <<<EOD
+            
+        <a href='http://www.binarymoon.co.uk/2014/09/timthumb-end-life/'>Binary Moon: TimThumb is No Longer Supported or Maintained</a><br>
+
+EOD;
+    }
 }

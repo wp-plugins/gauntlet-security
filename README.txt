@@ -3,8 +3,8 @@ Contributors: cbergen
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RGTZ39B4M83SA
 Tags: security, secure, vulnerability, exploit, hacks, audit, scanner, virus, gauntlet, checklist, protection
 Requires at least: 3.4
-Tested up to: 4.0
-Stable tag: 1.1.2
+Tested up to: 4.0.1
+Stable tag: 1.2.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -22,8 +22,8 @@ Checks and recommendations include:
 * Turn off directory indexing
 * Prevent code execution in the uploads directory
 * Block files in the includes directory
+* Prevent access to any stray files which could be useful to attackers
 * Rename or move the content directory
-* Make sure your server is not vulnerable to the Shellshock Bash bug
 * Disable dangerous PHP functions
 * Disable allow_url_include and allow_url_fopen PHP flags
 * Use a strong database password
@@ -31,7 +31,7 @@ Checks and recommendations include:
 * Keep WordPress up-to-date
 * Turn off the display of PHP errors
 * Turn off file editing in the control panel
-* Set security keys in the WP-Config file
+* Set security keys in WP-Config file
 * Don't advertise the WordPress version you are running
 * Turn off self-registration
 * Force SSL when accessing the admin area
@@ -95,8 +95,17 @@ Gauntlet Security can find opportunities for improvement and recommend ways to h
 1. The main page. 
 2. All checks include a detailed explanation and instructions on how to fix the issue. 
 3. Not all issues need to be fixed. Less important tests are included for the paranoid. 
+4. The plugin check will raise red flags if plugins aren't being maintained or haven't been updated 
 
 == Changelog ==
+
+= 1.2.0 =
+* New test: Prevent access to stray non-Wordpress files which could be useful to attackers
+* Remove test: Shellshock test (not an ongoing concern)
+* Enhancement: User enumeration test checks users with posts
+* Enhancement: Increase reliabilty if site is using a self-signed TLS certificate
+* Enhancement: Added common usernames (thanks to Viktor Szépe & Simon Fredsted)
+* Enhancement: Allowance for overriding requirements check
 
 = 1.1.2 =
 * Fix: Remove PHP short tags

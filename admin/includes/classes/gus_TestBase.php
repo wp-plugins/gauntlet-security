@@ -365,6 +365,10 @@ EOD;
 		return '';
 	}
     
+    protected function url_from_path($path)
+    {
+        return site_url() . '/' . str_replace(ABSPATH, '', $path);
+    }
     
     protected function start_timer()
     {

@@ -24,7 +24,8 @@ class gus_ExecutableUploads extends gus_TestBase
 			Try accessing the file 
 		*/
 		$full_url = $upload_dir['baseurl'] . '/' . $test_string . '.php';
-		$response = wp_remote_request( $full_url );
+        $args = (is_ssl()) ? array('sslverify' => false) : array() ; 
+		$response = wp_remote_request( $full_url, $args );
 
 		if( is_array($response) && isset($response['response']['code']) )
 		{

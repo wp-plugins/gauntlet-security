@@ -14,7 +14,7 @@ class gus_TestRunner
 		$this->tests[] = array('gus_DirectoryIndexing', 'Files');
 		$this->tests[] = array('gus_ExecutableUploads', 'Files');
 		$this->tests[] = array('gus_SecureIncludes', 'Files');
-		$this->tests[] = array('gus_Shellshock', 'Files');
+		$this->tests[] = array('gus_StrayFiles', 'Files');
 		$this->tests[] = array('gus_WpContentLocation', 'Files');
                                 
 		// PHP configuration    
