@@ -6,7 +6,7 @@
  * Plugin URI: 
  * Author: Cornelius Bergen, Matchbox Creative
  * Author URI: http://matchboxcreative.com
- * Version: 1.1.2
+ * Version: 1.2.0
  * Text Domain: gauntlet
  */
 
