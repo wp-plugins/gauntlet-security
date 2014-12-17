@@ -4,7 +4,7 @@ class gus_UserIdOne extends gus_TestBase
 {
 	protected function main_check()
 	{
-		if(array_reduce( get_users(), array( $this, 'is_one_callback' ) ))
+		if(array_reduce( get_users(), array( $this, 'is_one_callback' ), false ))
 		{
 			$this->fail();
 		}
@@ -16,7 +16,7 @@ class gus_UserIdOne extends gus_TestBase
     
     private function is_one_callback($carry, $user)
     {
-		return $user->ID == 1;
+        return $user->ID == 1 || $carry;
     }
 
 	public function title()
