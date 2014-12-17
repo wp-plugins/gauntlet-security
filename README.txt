@@ -3,8 +3,8 @@ Contributors: cbergen
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RGTZ39B4M83SA
 Tags: security, secure, vulnerability, exploit, hacks, audit, scanner, virus, gauntlet, checklist, protection
 Requires at least: 3.4
-Tested up to: 4.0.1
-Stable tag: 1.2.0
+Tested up to: 4.1
+Stable tag: 1.2.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -98,6 +98,11 @@ Gauntlet Security can find opportunities for improvement and recommend ways to h
 4. The plugin check will raise red flags if plugins aren't being maintained or haven't been updated 
 
 == Changelog ==
+
+= 1.2.1 =
+
+* Tested on WordPress 4.1
+* Fix: Test for user ID #1
 
 = 1.2.0 =
 * New test: Prevent access to stray non-Wordpress files which could be useful to attackers
