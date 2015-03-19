@@ -7,23 +7,35 @@ class gus_KeysAndSalts extends gus_TestBase
 	
 	protected function main_check()
 	{
-		if( defined('AUTH_KEY') && (AUTH_KEY !== 'put your unique phrase here' || AUTH_KEY !== '') )
-		{
-			$this->found_keys++;
-		}
-		if( defined('SECURE_AUTH_KEY') && (SECURE_AUTH_KEY !== 'put your unique phrase here' || SECURE_AUTH_KEY !== '') )
-		{
-			$this->found_keys++;
-		}
-		if( defined('LOGGED_IN_KEY') && (LOGGED_IN_KEY !== 'put your unique phrase here' || LOGGED_IN_KEY !== '') )
-		{
-			$this->found_keys++;
-		}
-		if( defined('NONCE_KEY') && (NONCE_KEY !== 'put your unique phrase here' || NONCE_KEY !== '') )
-		{
-			$this->found_keys++;
-		}
+        if( defined('AUTH_KEY') && defined('SECURE_AUTH_KEY') && defined('LOGGED_IN_KEY') && defined('NONCE_KEY') )
+        {
+    		if( AUTH_KEY !== 'put your unique phrase here' || AUTH_KEY !== '' )
+    		{
+    			$this->found_keys++;
+    		}
+    		if( SECURE_AUTH_KEY !== 'put your unique phrase here' || SECURE_AUTH_KEY !== '' )
+    		{
+    			$this->found_keys++;
+    		}
+    		if( LOGGED_IN_KEY !== 'put your unique phrase here' || LOGGED_IN_KEY !== '' )
+    		{
+    			$this->found_keys++;
+    		}
+    		if( NONCE_KEY !== 'put your unique phrase here' || NONCE_KEY !== '' )
+    		{
+    			$this->found_keys++;
+    		}
 		
+            // Keys should all be different.
+            // This will also catch cases where WordPress has been installed in a different language
+            // and uses a different phrase for "put your unique phrase here".
+            if( AUTH_KEY == SECURE_AUTH_SALT && 
+                SECURE_AUTH_SALT == LOGGED_IN_KEY && 
+                LOGGED_IN_KEY == NONCE_KEY )
+            {
+    			$this->found_keys = 0;
+            }
+        }
 		
 		if( $this->found_keys == 4 )
 		{

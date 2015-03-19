@@ -3,8 +3,8 @@ Contributors: cbergen
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RGTZ39B4M83SA
 Tags: security, secure, vulnerability, exploit, hacks, audit, scanner, virus, gauntlet, checklist, protection
 Requires at least: 3.4
-Tested up to: 4.1
-Stable tag: 1.2.1
+Tested up to: 4.1.1
+Stable tag: 1.2.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -98,6 +98,13 @@ Gauntlet Security can find opportunities for improvement and recommend ways to h
 4. The plugin check will raise red flags if plugins aren't being maintained or haven't been updated 
 
 == Changelog ==
+
+= 1.2.2 =
+
+* Fix: Stray file test failing on PHP versions less than 5.3.6
+* Enhancement: Account for multilingual WordPress installs when testing for salts
+* Enhancement: Plugin version check only triggers warning if plugin is older than current
+* Tested on WordPress 4.1.1
 
 = 1.2.1 =
 
