@@ -112,8 +112,7 @@ class gus_PluginAudit extends gus_TestBase
 			/*
 				Needs an update?
 			*/
-			// $installed = get_plugin_data( $path, false, false );
-			if($json->version != $plugin['Version'])
+			if(version_compare($json->version, $plugin['Version']))     // returns 1 if second param is lower
 			{
 				$sub_test['pass'] = 'critical';
 				$statuses[] = 'Needs an update';

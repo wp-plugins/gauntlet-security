@@ -508,7 +508,7 @@ class gus_StrayFiles extends gus_TestBase
         $iter->setMaxDepth(0);
         foreach ($iter as $fileinfo) 
         {
-            if ( $fileinfo->isFile() && $fileinfo->getExtension() == $extension) 
+            if ( $fileinfo->isFile() && pathinfo($fileinfo->getFilename(), PATHINFO_EXTENSION) == $extension) 
             {
                 $paths[] = $fileinfo->getPathname();
             }
@@ -686,7 +686,7 @@ EOD;
         return <<<EOD
             
         <a href='http://feross.org/cmsploit/'>Feross: 1% of CMS-Powered Sites Expose Their Database Passwords</a><br>
-        <a href='https://github.com/h5bp/server-configs-apache'>Apache Server Configs</a><br>
+        <a href='https://github.com/h5bp/server-configs-apache'>H5BP: Apache Server Configs</a><br>
 
 EOD;
     }
